@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="fill_parent"
+        android:layout_height="125dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="0dp"
+        android:clipChildren="false">
+
+        <ImageView
+            android:id="@+id/orange"
+            android:layout_width="8dp"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:background="#f97f46"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/category_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_toRightOf="@id/orange"
+            android:background="@drawable/category_bg_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingRight="35dp"
+            android:text="@string/pop_button"
+            android:textColor="@drawable/category_title_color_selected"
+            android:textSize="72px"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/arr_left"
+        android:layout_width="120dp"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/arr_left_button"
+        android:visibility="invisible"/>
+
+
+    <com.example.mysmall.mycustomtvrecyclerview.widget.CustomTvRecyclerView
+        android:id="@+id/id_recycler_view"
+        android:layout_width="@dimen/recycler_total_width"
+        android:layout_height="964dp"
+        android:layout_marginTop="128dp"
+        android:layout_toRightOf="@id/arr_left"
+        android:focusable="true"/>
+
+    <Button
+        android:id="@+id/arr_right"
+        android:layout_width="120dp"
+        android:layout_height="300dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/id_recycler_view"
+        android:background="@drawable/arr_right_button"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
